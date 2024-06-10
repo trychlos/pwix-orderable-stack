@@ -4,6 +4,7 @@
 
 //import { MessagesOrderedSet } from '../classes/messages-ordered-set.class';
 //import { OrderableStack } from '../classes/orderable-stack.class';
+import { Orderable } from '../classes/orderable.class';
 import { Stack } from '../classes/stack.class';
 //import { TypedMessage } from '../classes/typed-message.class';
 
@@ -29,6 +30,7 @@ import './i18n.js';
 //OrderableStack.Base = caBase;
 //OrderableStack.MessagesOrderedSet = MessagesOrderedSet;
 //OrderableStack.OrderableStack = OrderableStack;
+OrderableStack.Orderable = Orderable;
 OrderableStack.Stack = Stack;
 //OrderableStack.TypedMessage = TypedMessage;
 

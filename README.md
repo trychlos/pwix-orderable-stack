@@ -46,6 +46,12 @@ A function which returns the i18n namespace used by the package. Used to add tra
 
 ### Classes
 
+#### `OrderableStack.Orderable`
+
+A pure virtual class which implements the `IOrderable` interface.
+
+This class MUST be derived, and a `IOrderableCompare()` function MUST be provided by the derived class.
+
 #### `OrderableStack.Stack`
 
 A class which implements the `IStack` interface.
