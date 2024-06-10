@@ -16,6 +16,7 @@ import { Stack } from '../classes/stack.class';
 
 //import { IMessagesOrderedSet } from '../interfaces/imessages-ordered-set.iface';
 import { IOrderable } from '../interfaces/iorderable.iface.js';
+import { IOrderableStack } from '../interfaces/iorderable-stack.iface.js';
 import { IStack } from '../interfaces/istack.iface.js';
 //import { ITypedMessage } from '../interfaces/ityped-message.iface';
 
@@ -42,5 +43,6 @@ OrderableStack.Stack = Stack;
 
 //OrderableStack.IMessagesOrderedSet = IMessagesOrderedSet;
 OrderableStack.IOrderable = IOrderable;
+OrderableStack.IOrderableStack = IOrderableStack;
 OrderableStack.IStack = IStack;
 //OrderableStack.ITypedMessage = ITypedMessage;

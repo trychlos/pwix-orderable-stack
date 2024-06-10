@@ -79,6 +79,16 @@ It provides following methods:
 
     This interface MUST be implemented by any object which will want take advantage of the `IOrderableStack` interface.
 
+#### `OrderableStack.IOrderableStack`
+
+An interface which manages an `IStack` of `IOrderable`'s.
+
+It provides following methods:
+
+- `IOrderableStackLast()`
+
+    Returns the topmost object of the stack in the semantic order as provided by `IOrderable` interface.
+
 #### `OrderableStack.IStack`
 
 A very simple interface to manage a stack of objects.
