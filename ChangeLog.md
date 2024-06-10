@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.0.1-rc
+### 1.0.1
 
-    Release date: 
+    Release date: 2024- 6-10
 
     - Change global name to prevent circular reference
 
