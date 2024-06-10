@@ -14,6 +14,7 @@ import { Stack } from '../classes/stack.class';
 //import { YesNo } from '../definitions/yesno.def';
 
 //import { IMessagesOrderedSet } from '../interfaces/imessages-ordered-set.iface';
+import { IOrderable } from '../interfaces/iorderable.iface.js';
 import { IStack } from '../interfaces/istack.iface.js';
 //import { ITypedMessage } from '../interfaces/ityped-message.iface';
 
@@ -38,5 +39,6 @@ OrderableStack.Stack = Stack;
 //OrderableStack.YesNo = YesNo;
 
 //OrderableStack.IMessagesOrderedSet = IMessagesOrderedSet;
+OrderableStack.IOrderable = IOrderable;
 OrderableStack.IStack = IStack;
 //OrderableStack.ITypedMessage = ITypedMessage;

@@ -52,6 +52,27 @@ A class which implements the `IStack` interface.
 
 ### Interfaces
 
+#### `OrderableStack.IOrderable`
+
+An interface which let an object provides its own personal semantic order.
+
+It provides following methods:
+
+- `IOrderableCompare()`
+
+    A standard comparison function which must returns the usual sort result:
+
+    - -1 if `a` lesser than `b`
+    - -1 if `a` equal `b`
+    - +1 if `a` greater than `b`.
+
+    Please note that provided `a` and `b` arguments are `IOrderableStack` objects with following keys:
+
+    - `idx`: the index of the object in the underlying `IStack` object, the greater being the most recent
+    - `o`: the object itself.
+
+    This interface MUST be implemented by any object which will want take advantage of the `IOrderableStack` interface.
+
 #### `OrderableStack.IStack`
 
 A very simple interface to manage a stack of objects.
@@ -77,7 +98,6 @@ It provides following methods:
 - `IStackPush( o )`
 
     Add an object at the end of the stack.
-
 
 ### Blaze components
 
