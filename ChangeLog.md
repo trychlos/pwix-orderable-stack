@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Remove console debug
 
 ### 1.0.1
 

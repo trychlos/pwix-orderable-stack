@@ -23,5 +23,3 @@ OrdStack.Stack = Stack;
 OrdStack.IOrderable = IOrderable;
 OrdStack.IOrderableStack = IOrderableStack;
 OrdStack.IStack = IStack;
-
-console.debug( 'OrdStack', OrdStack );
