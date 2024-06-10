@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.0.2-rc
+### 1.0.2
 
-    Release date: 
+    Release date: 2024- 6-10
 
     - Remove console debug
 

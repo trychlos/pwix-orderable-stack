@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:orderable-stack',
-    version: '1.0.2-rc',
+    version: '1.0.2',
     summary: 'An IOrderableStack interface and its OrderableStack implementation',
     git: 'https://github.com/trychlos/pwix-orderable-stack.git',
     documentation: 'README.md'
