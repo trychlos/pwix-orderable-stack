@@ -36,9 +36,48 @@ The `OrderableStack` global object provides following items:
 
 ### Methods
 
+#### `OrderableStack.configure()`
+
+See above.
+
 #### `OrderableStack.i18n.namespace()`
 
 A function which returns the i18n namespace used by the package. Used to add translations at runtime.
+
+### Classes
+
+#### `OrderableStack.Stack`
+
+A class which implements the `IStack` interface.
+
+### Interfaces
+
+#### `OrderableStack.IStack`
+
+A very simple interface to manage a stack of objects.
+
+It provides following methods:
+
+- `IStackClear()`
+
+    Clears the content of the stack.
+
+- `IStackDump()`
+
+    Dump the content of the stack to the console.
+
+- `IStackLast()`
+
+    Returns the last object of the stack.
+
+- `IStackPull()`
+
+    Remove (and returns) the last object of the stack.
+
+- `IStackPush( o )`
+
+    Add an object at the end of the stack.
+
 
 ### Blaze components
 

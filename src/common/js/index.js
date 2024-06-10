@@ -2,9 +2,9 @@
  * pwix:orderable-stack/src/common/js/index.js
  */
 
-//import { caBase } from '../classes/base.class';
 //import { MessagesOrderedSet } from '../classes/messages-ordered-set.class';
 //import { OrderableStack } from '../classes/orderable-stack.class';
+import { Stack } from '../classes/stack.class';
 //import { TypedMessage } from '../classes/typed-message.class';
 
 //import { FieldCheck } from '../definitions/field-check.def';
@@ -28,6 +28,7 @@ import './i18n.js';
 //OrderableStack.Base = caBase;
 //OrderableStack.MessagesOrderedSet = MessagesOrderedSet;
 //OrderableStack.OrderableStack = OrderableStack;
+OrderableStack.Stack = Stack;
 //OrderableStack.TypedMessage = TypedMessage;
 
 //OrderableStack.FieldCheck = FieldCheck;
