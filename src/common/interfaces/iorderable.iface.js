@@ -18,7 +18,6 @@ export const IOrderable = DeclareMixin(( superclass ) => class extends superclas
      */
     constructor(){
         super( ...arguments );
-
         return this;
     }
 

@@ -39,7 +39,7 @@ export const IOrderableStack = DeclareMixin(( superclass ) => class extends supe
     constructor(){
         super( ...arguments );
 
-        assert( this instanceof IOrderableStack, 'the implementation class MUST also implements IOrderableStack' );
+        assert( this instanceof IStack, 'the implementation class MUST also implements IStack' );
 
         return this;
     }

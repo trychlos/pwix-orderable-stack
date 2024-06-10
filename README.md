@@ -52,6 +52,10 @@ A pure virtual class which implements the `IOrderable` interface.
 
 This class MUST be derived, and a `IOrderableCompare()` function MUST be provided by the derived class.
 
+#### `OrderableStack.OrderableStack`
+
+A class which implements the `IOrderableStack` interface.
+
 #### `OrderableStack.Stack`
 
 A class which implements the `IStack` interface.

@@ -1,18 +1,18 @@
 /*
- * /src/common/classes/messages-ordered-set.class.js
+ * /src/common/classes/orderable-stack.class.js
  *
- * A class which implements the IMessagesOrderedSet interface.
+ * A class which implements the IOrderableStack interface.
  */
 
 import _ from 'lodash';
 const assert = require( 'assert' ).strict; // up to nodejs v16.x
 import mix from '@vestergaard-company/js-mixin';
 
-import { OrderableStack } from './orderable-stack.class.js';
+import { Stack } from './stack.class.js';
 
-import { IMessagesOrderedSet } from '../interfaces/imessages-ordered-set.iface.js';
+import { IOrderableStack } from '../interfaces/iorderable-stack.iface.js';
 
-export class MessagesOrderedSet extends mix( OrderableStack ).with( IMessagesOrderedSet ){
+export class OrderableStack extends mix( Stack ).with( IOrderableStack ){
 
     // static data
 
