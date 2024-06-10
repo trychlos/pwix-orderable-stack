@@ -16,10 +16,12 @@ import './constants.js';
 import './configure.js';
 import './i18n.js';
 
-OrderableStack.Orderable = Orderable;
-OrderableStack.OrderableStack = OrderableStack;
-OrderableStack.Stack = Stack;
+OrdStack.Orderable = Orderable;
+OrdStack.OrderableStack = OrderableStack;
+OrdStack.Stack = Stack;
 
-OrderableStack.IOrderable = IOrderable;
-OrderableStack.IOrderableStack = IOrderableStack;
-OrderableStack.IStack = IStack;
+OrdStack.IOrderable = IOrderable;
+OrdStack.IOrderableStack = IOrderableStack;
+OrdStack.IStack = IStack;
+
+console.debug( 'OrdStack', OrdStack );

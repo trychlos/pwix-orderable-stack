@@ -26,7 +26,7 @@ export class OrderableStack extends mix( Stack ).with( IOrderableStack ){
 
     /**
      * Constructor
-     * @returns {MessagesOrderedSet}
+     * @returns {OrderableStack}
      */
     constructor(){
         super( ...arguments );

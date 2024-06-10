@@ -4,11 +4,11 @@
 
 This Meteor packages defines an `IOrderableStack` interface and provides a `OrderableStack` implementation of this interface.
 
-_Note: this could be as well just a pure NPM package (todo#1: to do another day)._
+_Note: this could be as well just a pure NPM package (todo #1: to do some day)._
 
 ## Configuration
 
-The package's behavior can be configured through a call to the `OrderableStack.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
+The package's behavior can be configured through a call to the `OrdStack.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
 
 Known configuration options are:
 
@@ -18,51 +18,51 @@ Known configuration options are:
 
     The accepted value can be any or-ed combination of following:
 
-    - `OrderableStack.C.Verbose.NONE`
+    - `OrdStack.C.Verbose.NONE`
 
         Do not display any trace log to the console
 
-    - `OrderableStack.C.Verbose.CONFIGURE`
+    - `OrdStack.C.Verbose.CONFIGURE`
 
-        Trace `OrderableStack.configure()` calls and their result
+        Trace `OrdStack.configure()` calls and their result
 
-Please note that `OrderableStack.configure()` method should be called in the same terms both in client and server sides.
+Please note that `OrdStack.configure()` method should be called in the same terms both in client and server sides.
 
-Remind too that Meteor packages are instanciated at application level. They are so only configurable once, or, in other words, only one instance has to be or can be configured. Addtionnal calls to `OrderableStack.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
+Remind too that Meteor packages are instanciated at application level. They are so only configurable once, or, in other words, only one instance has to be or can be configured. Addtionnal calls to `OrdStack.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
 
 ## Provides
 
-The `OrderableStack` global object provides following items:
+The `OrdStack` global object provides following items:
 
 ### Methods
 
-#### `OrderableStack.configure()`
+#### `OrdStack.configure()`
 
 See above.
 
-#### `OrderableStack.i18n.namespace()`
+#### `OrdStack.i18n.namespace()`
 
 A function which returns the i18n namespace used by the package. Used to add translations at runtime.
 
 ### Classes
 
-#### `OrderableStack.Orderable`
+#### `OrdStack.Orderable`
 
 A pure virtual class which implements the `IOrderable` interface.
 
 This class MUST be derived, and a `IOrderableCompare()` function MUST be provided by the derived class.
 
-#### `OrderableStack.OrderableStack`
+#### `OrdStack.OrderableStack`
 
 A class which implements the `IOrderableStack` interface.
 
-#### `OrderableStack.Stack`
+#### `OrdStack.Stack`
 
 A class which implements the `IStack` interface.
 
 ### Interfaces
 
-#### `OrderableStack.IOrderable`
+#### `OrdStack.IOrderable`
 
 An interface which let an object provides its own personal semantic order.
 
@@ -83,7 +83,7 @@ It provides following methods:
 
     This interface MUST be implemented by any object which will want take advantage of the `IOrderableStack` interface.
 
-#### `OrderableStack.IOrderableStack`
+#### `OrdStack.IOrderableStack`
 
 An interface which manages an `IStack` of `IOrderable`'s.
 
@@ -93,7 +93,7 @@ It provides following methods:
 
     Returns the topmost object of the stack in the semantic order as provided by `IOrderable` interface.
 
-#### `OrderableStack.IStack`
+#### `OrdStack.IStack`
 
 A very simple interface to manage a stack of objects.
 
@@ -118,18 +118,6 @@ It provides following methods:
 - `IStackPush( o )`
 
     Add an object at the end of the stack.
-
-### Blaze components
-
-#### `OrderableStack`
-
-Display the top message of the stack.
-
-Parameters can be provided:
-
-- label, defaulting to 'Cookies management policy'
-- title, defaulting to 'Cookies management policy'
-- route, defaulting to configured routePrefix + '/cookies'.
 
 ## NPM peer dependencies
 

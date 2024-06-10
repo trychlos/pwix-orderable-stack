@@ -4,10 +4,10 @@
 
 import _ from 'lodash';
 
-OrderableStack._conf = {};
+OrdStack._conf = {};
 
-OrderableStack._defaults = {
-    verbosity: OrderableStack.C.Verbose.CONFIGURE
+OrdStack._defaults = {
+    verbosity: OrdStack.C.Verbose.CONFIGURE
 };
 
 /**
@@ -16,17 +16,17 @@ OrderableStack._defaults = {
  * @param {Object} o configuration options
  * @returns {Object} the package configuration
  */
-OrderableStack.configure = function( o ){
+OrdStack.configure = function( o ){
     if( o && _.isObject( o )){
-        _.merge( OrderableStack._conf, OrderableStack._defaults, o );
+        _.merge( OrdStack._conf, OrdStack._defaults, o );
         // be verbose if asked for
-        if( OrderableStack._conf.verbosity & OrderableStack.C.Verbose.CONFIGURE ){
+        if( OrdStack._conf.verbosity & OrdStack.C.Verbose.CONFIGURE ){
             //console.log( 'pwix:orderable-stack configure() with', o, 'building', OrderableStack._conf );
             console.log( 'pwix:orderable-stack configure() with', o );
         }
     }
     // also acts as a getter
-    return OrderableStack._conf;
+    return OrdStack._conf;
 }
 
-_.merge( OrderableStack._conf, OrderableStack._defaults );
+_.merge( OrdStack._conf, OrdStack._defaults );

@@ -6,11 +6,11 @@
 
     Release date: 
 
-    - 
+    - Change global name to prevent circular reference
 
 ### 1.0.0
 
-Release date: 
+Release date: 2024- 6-10
 
 - Initial release
 
