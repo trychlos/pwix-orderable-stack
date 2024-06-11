@@ -1,8 +1,8 @@
 /*
- * /src/common/classes/orderable.class.js
+ * pwix:orderable-stack/src/common/classes/orderable.class.js
  *
  * A pure virtual class which implements the IOrderable interface.
- * 
+ *
  * Thoough this class implements the IOrderable interface, it doesn't provide IOrderableCompare() function. This later MUST be provided by a derived class.
  */
 

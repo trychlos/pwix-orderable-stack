@@ -1,9 +1,9 @@
 /*
- * /imports/common/interfaces/iorderable-stack.iface.js
+ * pwix:orderable-stack/src/common/interfaces/iorderable-stack.iface.js
  *
  * An interface to manage orderable objects.
  * The class which implements this interface MUST also implement IStack.
- * 
+ *
  * This interace provides methods as reactive data sources.
  */
 

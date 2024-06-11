@@ -1,5 +1,5 @@
 /*
- * /src/common/classes/base.class.js
+ * pwix:orderable-stack/src/common/classes/base.class.js
  *
  * A base class which does nothing but because '@vestergaard-company/js-mixin' only lets add an interface when extending a class...
  */

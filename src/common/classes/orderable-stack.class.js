@@ -1,5 +1,5 @@
 /*
- * /src/common/classes/orderable-stack.class.js
+ * pwix:orderable-stack/src/common/classes/orderable-stack.class.js
  *
  * A class which implements the IOrderableStack interface.
  */

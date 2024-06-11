@@ -1,8 +1,8 @@
 /*
- * /imports/common/interfaces/istack.iface.js
+ * pwix:orderable-stack/src/common/interfaces/istack.iface.js
  *
  * A very simple interface to manage a stack of objects.
- * 
+ *
  * This interace provides methods as reactive data sources.
  */
 
@@ -11,7 +11,7 @@ const assert = require( 'assert' ).strict;
 import { DeclareMixin } from '@vestergaard-company/js-mixin';
 
 import { Tracker } from 'meteor/tracker';
-    
+
 export const IStack = DeclareMixin(( superclass ) => class extends superclass {
 
     // private data

@@ -1,5 +1,5 @@
 /*
- * /imports/common/interfaces/iorderable.iface.js
+ * pwix:orderable-stack/src/common/interfaces/iorderable.iface.js
  *
  * The IOrderable interface let objects provide their own semantic order.
  */

@@ -1,5 +1,5 @@
 /*
- * /src/common/classes/stack.class.js
+ * pwix:orderable-stack/src/common/classes/stack.class.js
  *
  * A class which implements the IStack interface.
  */
