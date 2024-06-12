@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.1.0-rc
+### 1.1.0
 
-    Release date:
+    Release date: 2024- 6-12
 
     - Change global name (one more time) for more simplicity
     - Make IStack methods() reactive data sources bumping minor candidate version number
@@ -30,4 +30,4 @@ Release date: 2024- 6-10
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 10th
+- Last updated on 2024, Jun. 12th
