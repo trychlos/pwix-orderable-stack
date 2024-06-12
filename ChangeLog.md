@@ -2,11 +2,12 @@
 
 ## ChangeLog
 
-### 1.0.3-rc
+### 1.1.0-rc
 
     Release date:
 
     - Change global name (one more time) for more simplicity
+    - Make IStack methods() reactive data sources bumping minor candidate version number
 
 ### 1.0.2
 

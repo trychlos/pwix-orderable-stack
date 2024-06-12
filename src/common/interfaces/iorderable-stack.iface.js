@@ -2,7 +2,8 @@
  * pwix:orderable-stack/src/common/interfaces/iorderable-stack.iface.js
  *
  * An interface to manage orderable objects.
- * The class which implements this interface MUST also implement IStack.
+ * - the class which implements this interface MUST also implement IStack.
+ * - the managed objects MUST implement IOrderable.
  *
  * This interace provides methods as reactive data sources.
  */
@@ -12,6 +13,7 @@ const assert = require( 'assert' ).strict;
 import { DeclareMixin } from '@vestergaard-company/js-mixin';
 
 import { IOrderable } from '../interfaces/iorderable.iface.js';
+import { IStack } from '../interfaces/istack.iface.js';
 
 export const IOrderableStack = DeclareMixin(( superclass ) => class extends superclass {
 

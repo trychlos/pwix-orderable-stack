@@ -60,6 +60,7 @@ export const IStack = DeclareMixin(( superclass ) => class extends superclass {
      * @returns {Object} the last pushed object
      */
     IStackLast(){
+        this._dep.depend();
         return this._set.length > 0 ? this._set[this._set.length-1] : null;
     }
 
@@ -68,6 +69,7 @@ export const IStack = DeclareMixin(( superclass ) => class extends superclass {
      * @returns {Object} the last pushed object
      */
     IStackPull(){
+        this._dep.depend();
         return this._set.length > 0 ? this._set.pop() : null;
     }
 
