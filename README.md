@@ -26,42 +26,39 @@ This Meteor package is installable with the usual command:
 
 ## Provides
 
+### `Stack`
+
 The exported `Stack` global object provides following items:
 
-### Functions
+#### Functions
 
-#### `Stack.configure()`
+##### `Stack.configure()`
 
 See [below](#configuration).
 
-#### `Stack.i18n.namespace()`
+##### `Stack.i18n.namespace()`
 
 A function which returns the i18n namespace used by the package. Used to add translations at runtime.
 
-### Interfaces
+#### Interfaces
 
-#### `Stack.IOrderable`
+##### `Stack.IOrderable`
 
 An interface which let an object provides its own personal semantic order.
 
 It defines following methods:
 
-- `IOrderableCompare( a<any>, b<any> )`
+- `IOrderableCompare( a<IOrderable>, b<IOrderable> )`
 
     A standard comparison function which must returns the usual sort result:
 
     - -1 if `a` lesser than `b`
-    - -1 if `a` equal `b`
+    -  0 if `a` equal `b`
     - +1 if `a` greater than `b`.
-
-    Please note that provided `a` and `b` arguments are `IOrderableStack` objects with following keys:
-
-    - `idx`: the index of the object in the underlying `IStack` object, the greater being the most recent
-    - `o`: the object itself.
 
 This interface MUST be implemented by any object which will want take advantage of the `IOrderableStack` interface.
 
-#### `Stack.IOrderableStack`
+##### `Stack.IOrderableStack`
 
 An interface which manages an `IStack` of `IOrderable`'s.
 
@@ -69,9 +66,11 @@ It provides following methods:
 
 - `IOrderableStackLast()`
 
-    Returns the topmost object of the stack in the semantic order first, and the standard LIFO order then, as provided by `Stack.IOrderable` interface.
+    Returns the topmost object of the stack in the semantic order as provided by `Stack.IOrderable` interface first, and the standard LIFO order then.
 
-#### `Stack.IStack`
+The implementator MUST also implement the `Stack.IStack` interface. This is notably the case if the implementor chooses to derive from `Stack.Stack` class.
+
+##### `Stack.IStack`
 
 A very simple interface to manage a stack of objects.
 
@@ -103,19 +102,19 @@ It provides following methods:
 
     Add an object at the end of the stack.
 
-### Classes
+#### Classes
 
-#### `Stack.Orderable`
+##### `Stack.Orderable`
 
 A pure virtual class which implements the `IOrderable` interface.
 
-This class MUST be derived, and a `IOrderableCompare()` function MUST be provided by the derived class.
+This class cannot be instanciated as-is. It MUST be derived, and a `IOrderableCompare()` function MUST be provided by the derived class.
 
-#### `Stack.OrderableStack`
+##### `Stack.OrderableStack`
 
 A class, derived from `Stack.Stack`, which implements the `IOrderableStack` interface.
 
-#### `Stack.Stack`
+##### `Stack.Stack`
 
 A class which implements the `IStack` interface.
 

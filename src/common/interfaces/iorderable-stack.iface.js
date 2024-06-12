@@ -30,8 +30,20 @@ export const IOrderableStack = DeclareMixin(( superclass ) => class extends supe
             check( o, IOrderable );
             _foo.push({ idx: i, o: o });
         }
-        let _sorted = _foo.toSorted( IOrderableCompare );
+        let _sorted = _foo.toSorted( _sortFn );
         return _sorted.length > 0 ? _sorted[_sorted.length-1] : null;
+    }
+
+    // a and b here are objects { idx, o }
+    // we first compare semantic order, and only if equal compare by index
+    _sortFn( a, b ){
+        assert( a instanceof IOrderable, 'object MUST implement the IOrderable interface' );
+        assert( b instanceof IOrderable, 'object MUST implement the IOrderable interface' );
+        let res = IOrderableCompare( a.o, b.o );
+        if( !res ){
+            res = a.idx > b.idx ? -1 : ( a.idx < b.idx ? +1 : 0 );
+        }
+        return res;
     }
 
     /**

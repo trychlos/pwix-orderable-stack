@@ -24,12 +24,10 @@ export const IOrderable = DeclareMixin(( superclass ) => class extends superclas
     /**
      * @param {Object} a
      * @param {Object} b
-     *  Note that 'a' and 'b' are not really the implementation objects, but extensions as objects with following keys:
-     *  - idx: the index of the object in the IStack instance, the greater being the most recent
-     *  - o: the object itself
-     * @returns {Integer} the usual sort result (-1 if a<b, 0 if they are equal, +1 if a>b)
+     * @returns {Integer} the usual sort result (-1 if a lesser than b, 0 if they are equal, +1 if a greater than b)
      */
     IOrderableCompare( a, b ){
+        assert( false, 'this is a pure virtual method, MUST be defined by the implementor' );
         return 0;
     }
 });

@@ -8,6 +8,7 @@
 
     - Change global name (one more time) for more simplicity
     - Make IStack methods() reactive data sources bumping minor candidate version number
+    - Review sort function to provide only IOrderable objects to IOrderableCompare() function
 
 ### 1.0.2
 

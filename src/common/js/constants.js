@@ -6,7 +6,7 @@ Stack.C = {
     // verbosity levels
     Verbose: {
         NONE: 0,
-        CONFIGURE:      0x01 <<  0,
+        CONFIGURE:      0x01 <<  0
     }
 };
 
