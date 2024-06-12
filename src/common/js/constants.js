@@ -2,7 +2,7 @@
  * pwix:orderable-stack/src/common/js/constants.js
  */
 
-OrdStack.C = {
+Stack.C = {
     // verbosity levels
     Verbose: {
         NONE: 0,

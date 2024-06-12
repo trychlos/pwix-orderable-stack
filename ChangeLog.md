@@ -4,9 +4,9 @@
 
 ### 1.0.3-rc
 
-    Release date: 
+    Release date:
 
-    - 
+    - Change global name (one more time) for more simplicity
 
 ### 1.0.2
 

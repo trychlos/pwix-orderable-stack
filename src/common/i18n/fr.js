@@ -2,8 +2,8 @@
  * pwix:orderable-stack/src/common/i18n/fr.js
  */
 
-OrdStack.i18n = {
-    ... OrdStack.i18n,
+Stack.i18n = {
+    ... Stack.i18n,
     ... {
         fr: {
         }
