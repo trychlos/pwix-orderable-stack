@@ -21,28 +21,28 @@ This Meteor package is installable with the usual command:
 ## Usage
 
 ```
-    import { Stack } from 'meteor/pwix:orderable-stack';
+    import { OStack } from 'meteor/pwix:orderable-stack';
 ```
 
 ## Provides
 
-### `Stack`
+### `OStack`
 
-The exported `Stack` global object provides following items:
+The exported `OStack` global object provides following items:
 
 #### Functions
 
-##### `Stack.configure()`
+##### `OStack.configure()`
 
 See [below](#configuration).
 
-##### `Stack.i18n.namespace()`
+##### `OStack.i18n.namespace()`
 
 A function which returns the i18n namespace used by the package. Used to add translations at runtime.
 
 #### Interfaces
 
-##### `Stack.IOrderable`
+##### `OStack.IOrderable`
 
 An interface which let an object provides its own personal semantic order.
 
@@ -58,7 +58,7 @@ It defines following methods:
 
 This interface MUST be implemented by any object which will want take advantage of the `IOrderableStack` interface.
 
-##### `Stack.IOrderableStack`
+##### `OStack.IOrderableStack`
 
 An interface which manages an `IStack` of `IOrderable`'s.
 
@@ -66,11 +66,11 @@ It provides following methods:
 
 - `IOrderableStackLast()`
 
-    Returns the topmost object of the stack in the semantic order as provided by `Stack.IOrderable` interface first, and the standard LIFO order then.
+    Returns the topmost object of the stack in the semantic order as provided by `OStack.IOrderable` interface first, and the standard LIFO order then.
 
-The implementator MUST also implement the `Stack.IStack` interface. This is notably the case if the implementor chooses to derive from `Stack.Stack` class.
+The implementator MUST also implement the `OStack.IStack` interface. This is notably the case if the implementor chooses to derive from `OStack.Stack` class.
 
-##### `Stack.IStack`
+##### `OStack.IStack`
 
 A very simple interface to manage a stack of objects.
 
@@ -104,23 +104,23 @@ It provides following methods:
 
 #### Classes
 
-##### `Stack.Orderable`
+##### `OStack.Orderable`
 
 A pure virtual class which implements the `IOrderable` interface.
 
 This class cannot be instanciated as-is. It MUST be derived, and a `IOrderableCompare()` function MUST be provided by the derived class.
 
-##### `Stack.OrderableStack`
+##### `OStack.OrderableStack`
 
-A class, derived from `Stack.Stack`, which implements the `IOrderableStack` interface.
+A class, derived from `OStack.Stack`, which implements the `IOrderableStack` interface.
 
-##### `Stack.Stack`
+##### `OStack.Stack`
 
 A class which implements the `IStack` interface.
 
 ## Configuration
 
-The package's behavior can be configured through a call to the `Stack.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
+The package's behavior can be configured through a call to the `OStack.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
 
 Known configuration options are:
 
@@ -130,17 +130,17 @@ Known configuration options are:
 
     The accepted value can be any or-ed combination of following:
 
-    - `Stack.C.Verbose.NONE`
+    - `OStack.C.Verbose.NONE`
 
         Do not display any trace log to the console
 
-    - `Stack.C.Verbose.CONFIGURE`
+    - `OStack.C.Verbose.CONFIGURE`
 
-        Trace `Stack.configure()` calls and their result
+        Trace `OStack.configure()` calls and their result
 
-Please note that `Stack.configure()` method should be called in the same terms both in client and server sides.
+Please note that `OStack.configure()` method should be called in the same terms both in client and server sides.
 
-Remind too that Meteor packages are instanciated at application level. They are so only configurable once, or, in other words, only one instance has to be or can be configured. Addtionnal calls to `Stack.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
+Remind too that Meteor packages are instanciated at application level. They are so only configurable once, or, in other words, only one instance has to be or can be configured. Addtionnal calls to `OStack.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
 
 ## NPM peer dependencies
 

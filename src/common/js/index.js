@@ -12,14 +12,14 @@ import { IStack } from '../interfaces/istack.iface.js';
 
 import './global.js';
 import './constants.js';
+import './i18n.js';
 //
 import './configure.js';
-import './i18n.js';
 
-Stack.Orderable = Orderable;
-Stack.OrderableStack = OrderableStack;
-Stack.Stack = Stack;
+OStack.Orderable = Orderable;
+OStack.OrderableStack = OrderableStack;
+OStack.Stack = Stack;
 
-Stack.IOrderable = IOrderable;
-Stack.IOrderableStack = IOrderableStack;
-Stack.IStack = IStack;
+OStack.IOrderable = IOrderable;
+OStack.IOrderableStack = IOrderableStack;
+OStack.IStack = IStack;

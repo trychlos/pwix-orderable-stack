@@ -5,11 +5,11 @@
 import { pwixI18n } from 'meteor/pwix:i18n';
 
 import '../i18n/en.js';
-pwixI18n.namespace( I18N, 'en', Stack.i18n.en );
+pwixI18n.namespace( I18N, 'en', OStack.i18n.en );
 
 import '../i18n/fr.js';
-pwixI18n.namespace( I18N, 'fr', Stack.i18n.fr );
+pwixI18n.namespace( I18N, 'fr', OStack.i18n.fr );
 
-Stack.i18n.namespace = function(){
+OStack.i18n.namespace = function(){
     return I18N;
 };
