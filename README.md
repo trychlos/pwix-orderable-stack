@@ -14,13 +14,13 @@ Besides of these interfaces, `pwix:orderable-stack` also provides sample impleme
 
 This Meteor package is installable with the usual command:
 
-```
+```sh
     meteor add pwix:orderable-stack
 ```
 
 ## Usage
 
-```
+```js
     import { OStack } from 'meteor/pwix:orderable-stack';
 ```
 
@@ -166,6 +166,10 @@ New and updated translations are willingly accepted, and more than welcome. Just
 ## Cookies and comparable technologies
 
 None at the moment.
+
+## Issues & help
+
+In case of support or error, please report your issue request to our [Issues tracker](https://github.com/trychlos/pwix-blaze-layout/issues).
 
 ---
 P. Wieser
