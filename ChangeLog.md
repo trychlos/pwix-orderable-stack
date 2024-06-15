@@ -7,6 +7,7 @@
     Release date:
 
     - Minor README updates
+    - Rename methods to start with a lowercase
 
 ### 1.1.0
 

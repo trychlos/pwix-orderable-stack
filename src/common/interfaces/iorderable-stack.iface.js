@@ -62,7 +62,7 @@ export const IOrderableStack = DeclareMixin(( superclass ) => class extends supe
      * @returns {Object} last message, searched for in decreasing order of object semantic order
      *  A reactive data source
      */
-    IOrderableStackLast(){
+    iOrderableStackLast(){
         this._dep.depend();
         return this._set.length ? this._lastOrdered() : null;
     }

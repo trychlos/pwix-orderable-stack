@@ -26,7 +26,7 @@ export const IOrderable = DeclareMixin(( superclass ) => class extends superclas
      * @param {Object} b
      * @returns {Integer} the usual sort result (-1 if a lesser than b, 0 if they are equal, +1 if a greater than b)
      */
-    IOrderableCompare( a, b ){
+    iOrderableCompare( a, b ){
         assert( false, 'this is a pure virtual method, MUST be defined by the implementor' );
         return 0;
     }

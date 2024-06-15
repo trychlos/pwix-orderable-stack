@@ -39,8 +39,8 @@ export const IStack = DeclareMixin(( superclass ) => class extends superclass {
     /**
      * @summary Clears the message stack
      */
-    IStackClear(){
-        //console.debug( 'IStackClear()' );
+    iStackClear(){
+        //console.debug( 'iStackClear()' );
         this._set = [];
         this._dep.changed();
     }
@@ -48,9 +48,9 @@ export const IStack = DeclareMixin(( superclass ) => class extends superclass {
     /**
      * @summary Dumps the message stack
      */
-    IStackDump(){
+    iStackDump(){
         this._set.every(( o ) => {
-            console.debug( 'IStackDump()', o );
+            console.debug( 'iStackDump()', o );
             return true;
         });
         this._dep.depend();
@@ -59,7 +59,7 @@ export const IStack = DeclareMixin(( superclass ) => class extends superclass {
     /**
      * @returns {Object} the last pushed object
      */
-    IStackLast(){
+    iStackLast(){
         this._dep.depend();
         return this._set.length > 0 ? this._set[this._set.length-1] : null;
     }
@@ -68,7 +68,7 @@ export const IStack = DeclareMixin(( superclass ) => class extends superclass {
      * @summary Remove the last pushed object from the stack
      * @returns {Object} the last pushed object
      */
-    IStackPull(){
+    iStackPull(){
         this._dep.depend();
         return this._set.length > 0 ? this._set.pop() : null;
     }
@@ -76,8 +76,8 @@ export const IStack = DeclareMixin(( superclass ) => class extends superclass {
     /**
      * @param {Object} o the object to be pushed
      */
-    IStackPush( o ){
-        assert( o , 'IStackPush() o is not set' )
+    iStackPush( o ){
+        assert( o , 'iStackPush() o is not set' )
         this._set.push( o );
         this._dep.changed();
     }

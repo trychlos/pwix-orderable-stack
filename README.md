@@ -48,7 +48,7 @@ An interface which let an object provides its own personal semantic order.
 
 It defines following methods:
 
-- `IOrderableCompare( a<IOrderable>, b<IOrderable> )`
+- `iOrderableCompare( a<IOrderable>, b<IOrderable> )`
 
     A standard comparison function which must returns the usual sort result:
 
@@ -64,7 +64,7 @@ An interface which manages an `IStack` of `IOrderable`'s.
 
 It provides following methods:
 
-- `IOrderableStackLast()`
+- `iOrderableStackLast()`
 
     Returns the topmost object of the stack in the semantic order as provided by `OStack.IOrderable` interface first, and the standard LIFO order then.
 
@@ -76,29 +76,29 @@ A very simple interface to manage a stack of objects.
 
 It provides following methods:
 
-- `IStackClear()`
+- `iStackClear()`
 
     Clears the content of the stack.
 
-- `IStackDump()`
+- `iStackDump()`
 
     Dump the content of the stack to the console.
 
     A reactive data source.
 
-- `IStackLast()`
+- `iStackLast()`
 
     Returns the last object of the stack.
 
     A reactive data source.
 
-- `IStackPull()`
+- `iStackPull()`
 
     Remove (and returns) the last object of the stack.
 
     A reactive data source.
 
-- `IStackPush( o )`
+- `iStackPush( o )`
 
     Add an object at the end of the stack.
 
