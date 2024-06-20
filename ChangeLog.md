@@ -4,9 +4,9 @@
 
 ### 1.1.2-rc
 
-    Release date: 
+    Release date:
 
-    - 
+    - Fix call to sort function
 
 ### 1.1.1
 

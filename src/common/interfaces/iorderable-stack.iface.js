@@ -24,13 +24,14 @@ export const IOrderableStack = DeclareMixin(( superclass ) => class extends supe
     // we want the object have their own semantic order
     //  but to have a sorted result we also have to give it its index
     _lastOrdered(){
+        const self = this;
         let _foo = [];
         for( let i=0 ; i<this._set.length-1 ; ++i ){
             const o = this._set[i];
             check( o, IOrderable );
             _foo.push({ idx: i, o: o });
         }
-        let _sorted = _foo.toSorted( _sortFn );
+        let _sorted = _foo.toSorted( self._sortFn );
         return _sorted.length > 0 ? _sorted[_sorted.length-1] : null;
     }
 
